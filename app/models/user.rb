@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
 
 	validates_length_of :bio, minimun: 20, allow_blank: false
 
-	validate :email_format private
+	validates_uniqueness_of :email
 
-	def email_format
+	validate do
 		errors.add(:email, :invalid) unless email.match(EMAIL_REGEXP)
 	end	
 
