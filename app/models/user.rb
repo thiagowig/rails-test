@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+
+=begin
 	EMAIL_REGEXP = /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/
 
 	validates_presence_of :email, :full_name, :location, :password
@@ -12,6 +14,7 @@ class User < ActiveRecord::Base
 
 	validate do
 		errors.add(:email, :invalid) unless email.match(EMAIL_REGEXP)
-	end	
+	end
+=end		
 
 end
