@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Perfil: <%= @user.full_name %></h1>
+<h1><%= t '.title', user_name: @user.full_name %></h1>
 
 <ul>
 	<li>Localização: <%= @user.location %></li>
